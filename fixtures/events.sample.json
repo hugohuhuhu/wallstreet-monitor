@@ -1,0 +1,30 @@
+[
+  {
+    "id": "evt-001",
+    "title": "Activist fund pushes for board refresh at a regional bank",
+    "summary": "The fund disclosed a new campaign, requested two board seats, and signaled it may pursue a proxy contest if governance changes are not adopted.",
+    "url": "https://example.com/activist/bank-board-refresh",
+    "publishedAt": "2026-03-14T08:30:00Z"
+  },
+  {
+    "id": "evt-002",
+    "title": "Portfolio company files 8-K announcing CFO transition",
+    "summary": "The issuer filed an 8-K disclosing the CFO will step down next month and an interim finance chief has been appointed.",
+    "url": "https://example.com/sec/cfo-transition-8k",
+    "publishedAt": "2026-03-14T09:10:00Z"
+  },
+  {
+    "id": "evt-003",
+    "title": "Industrial issuer updates full-year guidance after weaker demand",
+    "summary": "Management lowered full-year revenue guidance and said demand remains below internal planning assumptions.",
+    "url": "https://example.com/issuer/guidance-cut",
+    "publishedAt": "2026-03-14T09:35:00Z"
+  },
+  {
+    "id": "evt-004",
+    "title": "Take-private discussion reported for software vendor",
+    "summary": "A financial sponsor is reportedly evaluating a take-private transaction and lenders have been approached for preliminary financing feedback.",
+    "url": "https://example.com/mna/take-private-rumor",
+    "publishedAt": "2026-03-14T10:05:00Z"
+  }
+]

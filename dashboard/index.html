@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wall Street Monitor</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Wall Street Key Account Monitor</p>
+        <h1>重點帳戶監測控制台</h1>
+        <p class="hero-copy">把公開來源、事件分級、人工審核與告警節奏放進同一個畫面，讓你先看風險，再看細節。</p>
+      </div>
+      <div class="hero-actions">
+        <button id="runButton" class="primary">Run Sync</button>
+        <button id="refreshButton" class="secondary">Refresh View</button>
+        <div class="status-pill" id="syncStatus">Idle</div>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="summaryGrid"></section>
+
+    <section class="panel panel-wide">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Market Posture</p>
+          <h2>來源覆蓋與最近執行</h2>
+        </div>
+        <p id="generatedAt" class="generated-at"></p>
+      </div>
+      <div class="meta-grid">
+        <div class="source-list" id="sourceList"></div>
+        <div class="runs-list" id="runsList"></div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <section class="panel">
+        <div class="panel-head compact">
+          <div>
+            <p class="panel-kicker">Priority Queue</p>
+            <h2>待人工審核</h2>
+          </div>
+          <span class="badge">Review</span>
+        </div>
+        <div id="reviewQueue" class="stack-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head compact">
+          <div>
+            <p class="panel-kicker">Alert Tape</p>
+            <h2>最近告警</h2>
+          </div>
+          <span class="badge danger">Alert</span>
+        </div>
+        <div id="alertsList" class="stack-list"></div>
+      </section>
+    </section>
+
+    <section class="panel panel-wide">
+      <div class="panel-head compact">
+        <div>
+          <p class="panel-kicker">Event Feed</p>
+          <h2>最新事件</h2>
+        </div>
+        <span class="badge">Feed</span>
+      </div>
+      <div id="eventsTable" class="events-table"></div>
+    </section>
+  </main>
+
+  <template id="emptyState">
+    <div class="empty-state">目前還沒有資料。</div>
+  </template>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
+

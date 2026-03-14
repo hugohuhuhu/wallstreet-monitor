@@ -1,0 +1,6 @@
+﻿runtime/*.db
+runtime/*.db-shm
+runtime/*.db-wal
+runtime/*.log
+runtime/*.png
+runtime/*.pid
