@@ -1,0 +1,7 @@
+﻿.gcloudignore
+.git
+.gitignore
+node_modules/
+runtime/
+gemini.stdout.txt
+gemini.stderr.txt
