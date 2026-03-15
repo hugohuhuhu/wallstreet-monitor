@@ -12,17 +12,6 @@
       "priority": "high",
       "pollMinutes": 5,
       "enabled": true
-    },
-    {
-      "id": "fed-press-rss",
-      "name": "Fed Press Releases",
-      "type": "rss",
-      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
-      "accountId": "macro-fed",
-      "accountLabel": "Federal Reserve",
-      "priority": "critical",
-      "pollMinutes": 15,
-      "enabled": false
     }
   ]
 }

@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs/promises";
 
-const DEFAULT_CONFIG = "config/sources.sample.json";
+const DEFAULT_CONFIG = "config/sources.live.json";
 
 function resolveFromCwd(targetPath) {
   return path.resolve(process.cwd(), targetPath);

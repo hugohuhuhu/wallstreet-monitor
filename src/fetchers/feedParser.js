@@ -9,6 +9,7 @@ function decodeXml(text = "") {
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&#x2F;/gi, "/")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -20,10 +21,12 @@ function extractTag(block, tagName) {
 }
 
 function extractLink(block) {
-  const linkTag = block.match(/<link\b([^>]*)>/i);
-  const hrefMatch = linkTag?.[1]?.match(/href=["']([^"']+)["']/i);
-  if (hrefMatch) {
-    return decodeXml(hrefMatch[1]);
+  const hrefLinks = [...block.matchAll(/<link\b([^>]*)>/gi)];
+  for (const linkTag of hrefLinks) {
+    const hrefMatch = linkTag?.[1]?.match(/href=["']([^"']+)["']/i);
+    if (hrefMatch) {
+      return decodeXml(hrefMatch[1]);
+    }
   }
 
   const fullTag = extractTag(block, "link");
@@ -38,9 +41,16 @@ function normalizeEntry(block) {
   return {
     id: extractTag(block, "guid") || extractTag(block, "id"),
     title: extractTag(block, "title"),
-    summary: extractTag(block, "description") || extractTag(block, "summary") || extractTag(block, "content"),
+    summary:
+      extractTag(block, "description") ||
+      extractTag(block, "summary") ||
+      extractTag(block, "content") ||
+      extractTag(block, "content:encoded"),
     url: extractLink(block),
-    publishedAt: extractTag(block, "pubDate") || extractTag(block, "published") || extractTag(block, "updated"),
+    publishedAt:
+      extractTag(block, "pubDate") ||
+      extractTag(block, "published") ||
+      extractTag(block, "updated"),
   };
 }
 

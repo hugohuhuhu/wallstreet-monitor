@@ -1,0 +1,50 @@
+{
+  "databasePath": "runtime/monitor.db",
+  "alertLogPath": "runtime/alerts.log",
+  "sources": [
+    {
+      "id": "fed-press-rss",
+      "name": "Federal Reserve Press Releases",
+      "type": "rss",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "accountId": "macro-fed",
+      "accountLabel": "Federal Reserve",
+      "priority": "critical",
+      "pollMinutes": 15,
+      "enabled": true
+    },
+    {
+      "id": "sec-press-rss",
+      "name": "SEC Press Releases",
+      "type": "rss",
+      "url": "https://www.sec.gov/rss/news/press.xml",
+      "accountId": "reg-sec",
+      "accountLabel": "U.S. Securities and Exchange Commission",
+      "priority": "critical",
+      "pollMinutes": 15,
+      "enabled": true
+    },
+    {
+      "id": "fdic-press-rss",
+      "name": "FDIC Press Releases",
+      "type": "rss",
+      "url": "https://www.fdic.gov/news/press-releases/rss.xml",
+      "accountId": "reg-fdic",
+      "accountLabel": "FDIC",
+      "priority": "high",
+      "pollMinutes": 30,
+      "enabled": true
+    },
+    {
+      "id": "cfpb-news-rss",
+      "name": "CFPB Newsroom",
+      "type": "rss",
+      "url": "https://www.consumerfinance.gov/about-us/newsroom/feed/",
+      "accountId": "reg-cfpb",
+      "accountLabel": "Consumer Financial Protection Bureau",
+      "priority": "high",
+      "pollMinutes": 30,
+      "enabled": true
+    }
+  ]
+}
